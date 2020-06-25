@@ -82,6 +82,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/loganbon/CLionProjects/minesweeper/Board.cpp">
+			<Option target="minesweeper"/>
+		</Unit>
+		<Unit filename="/Users/loganbon/CLionProjects/minesweeper/Board.h">
+			<Option target="minesweeper"/>
+		</Unit>
 		<Unit filename="/Users/loganbon/CLionProjects/minesweeper/main.cpp">
 			<Option target="minesweeper"/>
 		</Unit>

@@ -6,9 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/Users/loganbon/CLionProjects/minesweeper/main.cpp
-SFML/Graphics.hpp
--
-time.h
+/Users/loganbon/CLionProjects/minesweeper/Board.cpp
+Board.h
+/Users/loganbon/CLionProjects/minesweeper/Board.h
+
+/Users/loganbon/CLionProjects/minesweeper/Board.h
+vector
 -
 
