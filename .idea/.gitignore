@@ -7,6 +7,9 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 
+# CMake
+/cmake-build-debug/
+
 # Prerequisites
 *.d
 

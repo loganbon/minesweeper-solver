@@ -9,8 +9,12 @@
 /Users/loganbon/CLionProjects/minesweeper/Board.cpp
 Board.h
 /Users/loganbon/CLionProjects/minesweeper/Board.h
+SFML/Graphics.hpp
+-
+iostream
+-
 
 /Users/loganbon/CLionProjects/minesweeper/Board.h
-vector
+SFML/Graphics.hpp
 -
 
