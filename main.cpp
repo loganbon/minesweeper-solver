@@ -29,13 +29,13 @@ int main() {
     RenderWindow window;
     window.create(VideoMode(1280, 960), "Minesweeper");
 
-    Board b(3, window);
+    Board b(2, window);
 
     while (window.isOpen()) {
 
         Vector2i mPos = Mouse::getPosition(window);
-        int x = mPos.x/32;
-        int y = mPos.y/32;
+        int yC = (mPos.y - b.iPos) / 32;
+        int xC = (mPos.x - b.jPos) / 32;
 
         Event e;
         while (window.pollEvent(e)) {
@@ -48,10 +48,10 @@ int main() {
 
                 case Event::MouseButtonPressed:
                         if (e.key.code == Mouse::Left) {
-                            b.clickCell(mPos.x, mPos.y);
+                            b.clickCell(yC, xC);
 
                         } else if (e.key.code == Mouse::Right) {
-
+                            b.flagCell(yC, xC);
                         }
 
             }

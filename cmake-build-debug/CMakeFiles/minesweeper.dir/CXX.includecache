@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/Users/loganbon/CLionProjects/minesweeper/Board.cpp
+/Users/loganbon/CLionProjects/minesweeper-solver/Board.cpp
 Board.h
-/Users/loganbon/CLionProjects/minesweeper/Board.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Board.h
 SFML/Graphics.hpp
 -
 iostream
 -
 
-/Users/loganbon/CLionProjects/minesweeper/Board.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Board.h
 SFML/Graphics.hpp
 -
 

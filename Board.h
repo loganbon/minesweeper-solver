@@ -8,9 +8,10 @@ using namespace sf;
 class Board {
     public:
         int level;
-        int width, height, numMines;
+        int width, height, numMines, numFlagged;
         int pane[18][32];
         int disPane[18][32];
+        int visited[18][32];
         int iPos; int jPos;
 
         RenderWindow& window;
@@ -20,6 +21,7 @@ class Board {
         void displayBoard();
         void setLevel(int level);
         void clickCell(int x, int y);
+        void flagCell(int x, int y);
 };
 
 

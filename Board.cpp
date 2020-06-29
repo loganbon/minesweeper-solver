@@ -6,6 +6,7 @@ using namespace sf;
 
 Board::Board(int level, RenderWindow& win) : window(win){
     this -> level = level;
+    this -> numFlagged = 0;
     switch (level) {
         case 1:
             width = 8; height = 8;
@@ -29,17 +30,42 @@ Board::Board(int level, RenderWindow& win) : window(win){
 void Board::setLevel(int level) { this -> level = level; }
 
 void Board::clickCell(int x, int y) {
-    x = (x - jPos) / 32;
-    y = (y - iPos) / 32;
-    disPane[y][x] = pane[y][x];
+    disPane[x][y] = pane[x][y];
+    visited[x][y] = 1;
+    
+    if (pane[x][y] == 0) {
+        if (!visited[x + 1][y]) clickCell(x + 1, y);
+        if (!visited[x - 1][y]) clickCell(x - 1, y);
+        if (!visited[x + 1][y + 1]) clickCell(x + 1, y + 1);
+        if (!visited[x - 1][y + 1]) clickCell(x - 1, y + 1);
+        if (!visited[x + 1][y - 1]) clickCell(x + 1, y - 1);
+        if (!visited[x - 1][y - 1]) clickCell(x - 1, y - 1);
+        if (!visited[x][y + 1]) clickCell(x, y + 1);
+        if (!visited[x][y - 1]) clickCell(x, y - 1);
+    }
+}
+
+void Board::flagCell(int x, int y) {
+    if (disPane[x][y] == 11) {
+        disPane[x][y] = 10;
+        numFlagged--;
+    } else {
+        disPane[x][y] = 11;
+        numFlagged++;
+    }
 }
 
 void Board::createBoard() {
 
-    for (int i = 1; i <= height; i++) {
-        for (int j = 1; j <= width; j++) {
+    for (int i = 0; i <= height + 1; i++) {
+        for (int j = 0; j <= width + 1; j++) {
             disPane[i][j] = 10;
             pane[i][j] = 0;
+            visited[i][j] = 0;
+            if (i == 0 || j == 0 || i == height + 1 || j == width + 1) {
+                pane[i][j] = -1;
+                visited[i][j] = -1;
+            }
         }
     }
 
