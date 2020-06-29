@@ -86,6 +86,7 @@ void Board::displayBoard(){
             game.setTextureRect(IntRect(32*disPane[i][j], 0, 32, 32));
 
             game.setPosition(jPos + (j*32), iPos + (i*32));
+            
             window.draw(game);
         }
     }
