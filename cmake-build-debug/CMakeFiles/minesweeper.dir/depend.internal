@@ -4,6 +4,10 @@
 CMakeFiles/minesweeper.dir/Board.cpp.o
  /Users/loganbon/CLionProjects/minesweeper-solver/Board.cpp
  /Users/loganbon/CLionProjects/minesweeper-solver/Board.h
+CMakeFiles/minesweeper.dir/Player.cpp.o
+ /Users/loganbon/CLionProjects/minesweeper-solver/Board.h
+ /Users/loganbon/CLionProjects/minesweeper-solver/Player.cpp
+ /Users/loganbon/CLionProjects/minesweeper-solver/Player.h
 CMakeFiles/minesweeper.dir/main.cpp.o
  /Users/loganbon/CLionProjects/minesweeper-solver/Board.h
  /Users/loganbon/CLionProjects/minesweeper-solver/main.cpp

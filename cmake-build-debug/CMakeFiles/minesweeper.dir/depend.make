@@ -4,6 +4,10 @@
 CMakeFiles/minesweeper.dir/Board.cpp.o: ../Board.cpp
 CMakeFiles/minesweeper.dir/Board.cpp.o: ../Board.h
 
+CMakeFiles/minesweeper.dir/Player.cpp.o: ../Board.h
+CMakeFiles/minesweeper.dir/Player.cpp.o: ../Player.cpp
+CMakeFiles/minesweeper.dir/Player.cpp.o: ../Player.h
+
 CMakeFiles/minesweeper.dir/main.cpp.o: ../Board.h
 CMakeFiles/minesweeper.dir/main.cpp.o: ../main.cpp
 

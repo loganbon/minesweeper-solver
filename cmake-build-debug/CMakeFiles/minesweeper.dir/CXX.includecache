@@ -18,3 +18,13 @@ iostream
 SFML/Graphics.hpp
 -
 
+/Users/loganbon/CLionProjects/minesweeper-solver/main.cpp
+SFML/Graphics.hpp
+-
+time.h
+-
+iostream
+-
+Board.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Board.h
+

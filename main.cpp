@@ -4,18 +4,7 @@
 #include "Board.h"
 using namespace sf;
 
-
-void drawMenu(RenderWindow &window) {
-
-    Sprite btn1;
-    btn1.setTextureRect(IntRect(100, 100, 100, 100));
-    //btn1.setPosition(Vector2f(100, 100));
-    btn1.setColor(Color(150, 50, 250));
-
-    window.draw(btn1);
-}
-
-bool click(FloatRect button, Vector2f coord) {
+bool contains(FloatRect button, Vector2f coord) {
     if (button.contains(coord)) {
         return true;
     }
@@ -27,9 +16,9 @@ int main() {
     srand(time(0));
 
     RenderWindow window;
-    window.create(VideoMode(1280, 960), "Minesweeper");
+    window.create(VideoMode(1280, 960), "Minesweeper", Style::Titlebar | Style::Close);
 
-    Board b(2, window);
+    Board b(3, window);
 
     while (window.isOpen()) {
 
@@ -37,27 +26,28 @@ int main() {
         int yC = (mPos.y - b.iPos) / 32;
         int xC = (mPos.x - b.jPos) / 32;
 
+
+        //std::cout << xC << ", " << yC << std::endl;
+
+
         Event e;
         while (window.pollEvent(e)) {
 
-            switch(e.type) {
-
-                case Event::Closed:
-                    window.close();
-                    break;
-
-                case Event::MouseButtonPressed:
-                        if (e.key.code == Mouse::Left) {
-                            b.clickCell(yC, xC);
-
-                        } else if (e.key.code == Mouse::Right) {
-                            b.flagCell(yC, xC);
-                        }
-
+            if (e.type == Event::Closed) {
+                window.close();
+            } else if (e.type == Event::MouseButtonPressed) {
+                if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Left) {
+                    b.clickCell(yC, xC);
+                } else if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Right) {
+                    b.flagCell(yC, xC);
+                } else if (b.clickSmiley(xC, yC)) {
+                    b.reset();
+                }
             }
         }
 
-        window.clear(Color::White);
+        Color bgrnd(250, 243, 230);
+        window.clear(bgrnd);
 
         b.displayBoard();
 
