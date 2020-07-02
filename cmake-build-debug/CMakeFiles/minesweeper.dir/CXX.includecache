@@ -6,17 +6,17 @@
 
 #IncludeRegexTransform: 
 
-/Users/loganbon/CLionProjects/minesweeper-solver/Board.cpp
-Board.h
 /Users/loganbon/CLionProjects/minesweeper-solver/Board.h
 SFML/Graphics.hpp
--
-iostream
 -
 
-/Users/loganbon/CLionProjects/minesweeper-solver/Board.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Button.h
 SFML/Graphics.hpp
 -
+
+/Users/loganbon/CLionProjects/minesweeper-solver/Player.h
+Board.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Board.h
 
 /Users/loganbon/CLionProjects/minesweeper-solver/main.cpp
 SFML/Graphics.hpp
@@ -25,6 +25,12 @@ time.h
 -
 iostream
 -
+string
+-
 Board.h
 /Users/loganbon/CLionProjects/minesweeper-solver/Board.h
+Player.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Player.h
+Button.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Button.h
 

@@ -27,6 +27,7 @@ class Board {
         void reset();
         bool mouseInBounds(int x, int y);
         bool clickSmiley(int x, int y);
+        void changeLevel(int level);
 };
 
 

@@ -150,6 +150,33 @@ Board.cpp.s:
 	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/Board.cpp.s
 .PHONY : Board.cpp.s
 
+Button.o: Button.cpp.o
+
+.PHONY : Button.o
+
+# target to build an object file
+Button.cpp.o:
+	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/Button.cpp.o
+.PHONY : Button.cpp.o
+
+Button.i: Button.cpp.i
+
+.PHONY : Button.i
+
+# target to preprocess a source file
+Button.cpp.i:
+	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/Button.cpp.i
+.PHONY : Button.cpp.i
+
+Button.s: Button.cpp.s
+
+.PHONY : Button.s
+
+# target to generate assembly for a file
+Button.cpp.s:
+	$(MAKE) -f CMakeFiles/minesweeper.dir/build.make CMakeFiles/minesweeper.dir/Button.cpp.s
+.PHONY : Button.cpp.s
+
 Player.o: Player.cpp.o
 
 .PHONY : Player.o
@@ -216,6 +243,9 @@ help:
 	@echo "... Board.o"
 	@echo "... Board.i"
 	@echo "... Board.s"
+	@echo "... Button.o"
+	@echo "... Button.i"
+	@echo "... Button.s"
 	@echo "... Player.o"
 	@echo "... Player.i"
 	@echo "... Player.s"

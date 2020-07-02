@@ -3,7 +3,7 @@ project(minesweeper)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(minesweeper main.cpp Board.cpp Board.h Player.cpp Player.h)
+add_executable(minesweeper main.cpp Board.cpp Board.h Player.cpp Player.h Button.cpp Button.h)
 
 find_package(SFML 2.5 COMPONENTS system window graphics network audio REQUIRED)
 include_directories(${SFML_INCLUDE_DIRS})

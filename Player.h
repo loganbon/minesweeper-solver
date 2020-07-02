@@ -4,11 +4,15 @@
 #include "Board.h"
 
 class Player {
+    public:
+        int wins;
+        int gamesPlayed;
+        Board& b;
+        Window& window;
 
-    int numClicks;
-    int wins;
-    int gamesPlayed;
-    Board b;
+        Player(Board& b, Window& win);
+        void cspSolve();
+        void firstMove();
 
 };
 

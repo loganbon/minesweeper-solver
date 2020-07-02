@@ -88,6 +88,12 @@
 		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Board.h">
 			<Option target="minesweeper"/>
 		</Unit>
+		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Button.cpp">
+			<Option target="minesweeper"/>
+		</Unit>
+		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Button.h">
+			<Option target="minesweeper"/>
+		</Unit>
 		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Player.cpp">
 			<Option target="minesweeper"/>
 		</Unit>

@@ -5,10 +5,16 @@
 using namespace sf;
 
 Board::Board(int level, RenderWindow& win) : window(win){
-    this -> level = level;
     this -> numFlagged = 0;
     this -> status = 0;
     this -> numClicks = 0;
+    setLevel(level);
+    createBoard();
+}
+
+void Board::setLevel(int level) {
+    this -> level = level;
+
     switch (level) {
         case 1:
             width = 8; height = 8;
@@ -26,17 +32,15 @@ Board::Board(int level, RenderWindow& win) : window(win){
             iPos = 160; jPos = 128;
             break;
     }
-    createBoard();
 }
 
-void Board::setLevel(int level) {
-    this -> level = level;
+void Board::changeLevel(int level) {
+    setLevel(level);
     reset();
 }
 
 void Board::clickCell(int x, int y) {
-    if (status == -1 || status == 1) return;
-    if (disPane[x][y] == 11) return;
+    if (status == -1 || status == 1 || visited[x][y] == 1 || disPane[x][y] == 11) return;
     if (pane[x][y] == 9) status = -1;
     disPane[x][y] = pane[x][y];
     visited[x][y] = 1;
@@ -142,13 +146,13 @@ void Board::displayBoard(){
     Font arial;
     if (!arial.loadFromFile("fonts/arialbd.TTF")) { std::cout << "Failed to load font" << std::endl; }
 
-    Text text;
-    text.setFont(arial);
-    text.setString(std::to_string(numMines - numFlagged));
-    text.setCharacterSize(42);
-    text.setFillColor(sf::Color::Black);
-    text.setPosition(jPos + 45, iPos - 45);
-    window.draw(text);
+    Text flagCount;
+    flagCount.setFont(arial);
+    flagCount.setString(std::to_string(numMines - numFlagged));
+    flagCount.setCharacterSize(42);
+    flagCount.setFillColor(Color::Black);
+    flagCount.setPosition(jPos + 45, iPos - 45);
+    window.draw(flagCount);
 
     // smiley face & reset button
     Texture menuHead;
@@ -179,5 +183,4 @@ void Board::displayBoard(){
             window.draw(game);
         }
     }
-
 }

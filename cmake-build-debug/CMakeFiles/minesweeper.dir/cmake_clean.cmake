@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/minesweeper.dir/Board.cpp.o"
+  "CMakeFiles/minesweeper.dir/Button.cpp.o"
   "CMakeFiles/minesweeper.dir/Player.cpp.o"
   "CMakeFiles/minesweeper.dir/main.cpp.o"
   "minesweeper"
