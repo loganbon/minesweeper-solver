@@ -62,7 +62,7 @@ void Board::clickCell(int x, int y) {
 
 void Board::flagCell(int x, int y) {
     if (status == -1 || status == 1) return;
-    if (numFlagged == numMines) return;
+    if (numFlagged == numMines && numClicks + numFlagged == (height * width)) return;
     if (disPane[x][y] == 11) {
         disPane[x][y] = 10;
         numFlagged--;
@@ -169,6 +169,23 @@ void Board::displayBoard(){
     head.setPosition(window.getSize().x/2, iPos - 20);
 
     window.draw(head);
+
+    // algo & attempts label
+    Text algo;
+    algo.setString("Algorithm:");
+    algo.setFont(arial);
+    algo.setCharacterSize(32);
+    algo.setFillColor(Color::Black);
+    algo.setPosition(35, 750);
+    window.draw(algo);
+
+    Text atmpt;
+    atmpt.setString("Attempts:");
+    atmpt.setFont(arial);
+    atmpt.setCharacterSize(32);
+    atmpt.setFillColor(Color::Black);
+    atmpt.setPosition(45, 850);
+    window.draw(atmpt);
 
     // cell textures
     Texture t;

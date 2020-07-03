@@ -16,12 +16,15 @@ int main() {
     RenderWindow window;
     window.create(VideoMode(1280, 960), "Minesweeper", Style::Titlebar | Style::Close);
 
-    Board b(2, window);
+    Board b(1, window);
     Player p(b, window);
 
     Button begBtn(window, Vector2f(30, 20), "Beginner");
     Button intBtn(window, Vector2f(190, 20), "Intermediate");
-    Button expBtn(window, Vector2f(430, 20), "Expert");
+    Button expBtn(window, Vector2f(435, 20), "Expert");
+    begBtn.press();
+
+
 
     while (window.isOpen()) {
 
@@ -70,8 +73,6 @@ int main() {
         }
 
         window.clear(bgrnd);
-
-        // p.cspSolve();
 
         begBtn.display();
         intBtn.display();
