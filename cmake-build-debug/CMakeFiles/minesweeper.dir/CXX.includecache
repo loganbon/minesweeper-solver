@@ -6,15 +6,21 @@
 
 #IncludeRegexTransform: 
 
-/Users/loganbon/CLionProjects/minesweeper-solver/Board.cpp
-Board.h
 /Users/loganbon/CLionProjects/minesweeper-solver/Board.h
 SFML/Graphics.hpp
+-
+
+/Users/loganbon/CLionProjects/minesweeper-solver/Player.cpp
+Player.h
+/Users/loganbon/CLionProjects/minesweeper-solver/Player.h
+vector
+-
+thread
 -
 iostream
 -
 
+/Users/loganbon/CLionProjects/minesweeper-solver/Player.h
+Board.h
 /Users/loganbon/CLionProjects/minesweeper-solver/Board.h
-SFML/Graphics.hpp
--
 

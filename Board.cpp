@@ -14,7 +14,6 @@ Board::Board(int level, RenderWindow& win) : window(win){
 
 void Board::setLevel(int level) {
     this -> level = level;
-
     switch (level) {
         case 1:
             width = 8; height = 8;
@@ -56,7 +55,6 @@ void Board::clickCell(int x, int y) {
         if (!visited[x][y + 1]) clickCell(x, y + 1);
         if (!visited[x][y - 1]) clickCell(x, y - 1);
     }
-
     if (numClicks + numFlagged == (height * width)) { status = 1; }
 }
 
@@ -111,7 +109,6 @@ void Board::createBoard() {
     srand(time(0));
 
     while (minesPlaced < numMines) {
-
         int i = (rand() % height) + 1;
         int j = (rand() % width) + 1;
 
@@ -167,7 +164,6 @@ void Board::displayBoard(){
     head.setScale(sf::Vector2f(2.f, 2.f));
     head.setOrigin(head.getLocalBounds().width/2, head.getLocalBounds().height/2);
     head.setPosition(window.getSize().x/2, iPos - 20);
-
     window.draw(head);
 
     // algo & attempts label
@@ -196,7 +192,6 @@ void Board::displayBoard(){
         for (int j = 1; j <= width; j++) {
             game.setTextureRect(IntRect(32*disPane[i][j], 0, 32, 32));
             game.setPosition(jPos + (j*32), iPos + (i*32));
-            
             window.draw(game);
         }
     }

@@ -7,12 +7,18 @@ class Player {
     public:
         int wins;
         int gamesPlayed;
+        char method;
         Board& b;
         Window& window;
 
         Player(Board& b, Window& win);
-        void cspSolve();
+        void setMethod(char method);
+        char getMethod();
+        void delayClick(int x, int y);
+        void randomSolve();
+        void tankSolve();
         void firstMove();
+        void play();
 
 };
 

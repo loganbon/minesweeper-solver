@@ -9,17 +9,18 @@ Button::Button(RenderWindow& win, Vector2f pos, std::string text) : window(win) 
 
     if (!arial.loadFromFile("fonts/arialbd.TTF")) { std::cout << "Failed to load font" << std::endl; }
 
-    button.setPosition(pos);
-    int width = text.size() * 20;
-    button.setSize(Vector2f(width,50));
-    button.setFillColor(bgrnd);
-
     label.setString(text);
     label.setFont(arial);
     label.setCharacterSize(32);
     label.setFillColor(Color::Black);
 
+    button.setPosition(pos);
+    int width = label.getLocalBounds().width + 10;
+    button.setSize(Vector2f(width,50));
+    button.setFillColor(bgrnd);
+
     label.setPosition((pos.x + width / 2) - (label.getLocalBounds().width / 2), pos.y + 5);
+
 
 }
 

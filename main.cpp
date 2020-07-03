@@ -21,10 +21,14 @@ int main() {
 
     Button begBtn(window, Vector2f(30, 20), "Beginner");
     Button intBtn(window, Vector2f(190, 20), "Intermediate");
-    Button expBtn(window, Vector2f(435, 20), "Expert");
+    Button expBtn(window, Vector2f(400, 20), "Expert");
     begBtn.press();
 
+    Button cspBtn(window, Vector2f(220, 745), "CSP");
+    Button tankBtn(window, Vector2f(310, 745), "Tank");
+    cspBtn.press();
 
+    Button gameOn(window, Vector2f(615, 745), "Go");
 
     while (window.isOpen()) {
 
@@ -42,32 +46,48 @@ int main() {
 
             } else if (e.type == Event::MouseButtonPressed) {
 
-                if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Left) {
-                    b.clickCell(yC, xC);
+                if (!gameOn.getState()) {
+                    if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Left) {
+                        b.clickCell(yC, xC);
 
-                } else if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Right) {
-                    b.flagCell(yC, xC);
+                    } else if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Right) {
+                        b.flagCell(yC, xC);
 
-                } else if (b.clickSmiley(xC, yC)) {
-                    b.reset();
+                    } else if (b.clickSmiley(xC, yC)) {
+                        b.reset();
 
-                } else if (begBtn.mouseOn(mPos.x, mPos.y)) {
-                    if (intBtn.getState()) intBtn.press();
-                    if (!begBtn.getState()) begBtn.press();
-                    if (expBtn.getState()) expBtn.press();
-                    b.changeLevel(1);
+                    } else if (begBtn.mouseOn(mPos.x, mPos.y)) {
+                        if (intBtn.getState()) intBtn.press();
+                        if (!begBtn.getState()) begBtn.press();
+                        if (expBtn.getState()) expBtn.press();
+                        b.changeLevel(1);
 
-                } else if (intBtn.mouseOn(mPos.x, mPos.y)) {
-                    if (!intBtn.getState()) intBtn.press();
-                    if (begBtn.getState()) begBtn.press();
-                    if (expBtn.getState()) expBtn.press();
-                    b.changeLevel(2);
+                    } else if (intBtn.mouseOn(mPos.x, mPos.y)) {
+                        if (!intBtn.getState()) intBtn.press();
+                        if (begBtn.getState()) begBtn.press();
+                        if (expBtn.getState()) expBtn.press();
+                        b.changeLevel(2);
 
-                } else if (expBtn.mouseOn(mPos.x, mPos.y)) {
-                    if (intBtn.getState()) intBtn.press();
-                    if (begBtn.getState()) begBtn.press();
-                    if (!expBtn.getState()) expBtn.press();
-                    b.changeLevel(3);
+                    } else if (expBtn.mouseOn(mPos.x, mPos.y)) {
+                        if (intBtn.getState()) intBtn.press();
+                        if (begBtn.getState()) begBtn.press();
+                        if (!expBtn.getState()) expBtn.press();
+                        b.changeLevel(3);
+                    } else if (cspBtn.mouseOn(mPos.x, mPos.y)) {
+                        if (!cspBtn.getState()) cspBtn.press();
+                        if (tankBtn.getState()) tankBtn.press();
+
+                    } else if (tankBtn.mouseOn(mPos.x, mPos.y)) {
+                        if (cspBtn.getState()) cspBtn.press();
+                        if (!tankBtn.getState()) tankBtn.press();
+
+                    } else if (gameOn.mouseOn(mPos.x, mPos.y)) {
+                        if (!gameOn.getState()) {
+                            gameOn.press();
+                            p.play();
+                            gameOn.press();
+                        }
+                    }
                 }
             }
         }
@@ -77,6 +97,11 @@ int main() {
         begBtn.display();
         intBtn.display();
         expBtn.display();
+
+        cspBtn.display();
+        tankBtn.display();
+
+        gameOn.display();
 
         b.displayBoard();
         window.display();
