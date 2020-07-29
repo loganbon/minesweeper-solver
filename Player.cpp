@@ -17,6 +17,7 @@ void Player::firstMove() {
     int corners[4][2] = {{1, 1}, {1, b.getWidth()}, {b.getHeight(), 1}, {b.getHeight(), b.getWidth()}};
     int rIdx = rand() % 4;
     b.clickCell(corners[rIdx][0], corners[rIdx][1]);
+    
 }
 
 bool isBorder(int x, int y) { return true;
