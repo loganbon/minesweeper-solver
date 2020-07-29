@@ -3,9 +3,7 @@
 #include <thread>
 #include <iostream>
 
-using namespace std;
-
-Player::Player(Board& board, Window& win) : b(board), window(win) {
+Player::Player(Board& board, sf::Window& win) : b(board), window(win) {
     this -> wins = 0;
     this -> gamesPlayed = 0;
 };
@@ -16,7 +14,7 @@ char Player::getMethod() { return method; }
 
 void Player::firstMove() {
 
-    int corners[4][2] = {{1, 1}, {1, b.width}, {b.height, 1}, {b.height, b.width}};
+    int corners[4][2] = {{1, 1}, {1, b.getWidth()}, {b.getHeight(), 1}, {b.getHeight(), b.getWidth()}};
     int rIdx = rand() % 4;
     b.clickCell(corners[rIdx][0], corners[rIdx][1]);
 }
@@ -29,10 +27,10 @@ void Player::tankSolve() {
 
     firstMove();
 
-    vector<vector<int>> borderTiles;
+    std::vector<std::vector<int>> borderTiles;
 
-    for (int i = 1; i <= b.height; i++) {
-        for (int j = 1; j <= b.width; j++) {
+    for (int i = 1; i <= b.getHeight(); i++) {
+        for (int j = 1; j <= b.getWidth(); j++) {
 
         }
     }
@@ -51,12 +49,12 @@ void Player::randomSolve() {
 
     sf::Clock Clock;
 
-    while (b.status != -1 || b.status == 1) {
+    while (b.getStatus() != -1 || b.getStatus() == 1) {
         while  (Clock.getElapsedTime() < sf::microseconds(200000)) { }
-        int x = (rand() % b.height) + 1;
-        int y = (rand() % b.width) + 1;
+        int x = (rand() % b.getHeight()) + 1;
+        int y = (rand() % b.getWidth()) + 1;
         b.clickCell(x, y);
-        cout << x << ", " << y << endl;
+        std::cout << x << ", " << y << std::endl;
 
         Clock.restart();
         b.displayBoard();

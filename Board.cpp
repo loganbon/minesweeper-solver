@@ -2,9 +2,7 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-using namespace sf;
-
-Board::Board(int level, RenderWindow& win) : window(win){
+Board::Board(int level, sf::RenderWindow& win) : window(win){
     this -> numFlagged = 0;
     this -> status = 0;
     this -> numClicks = 0;
@@ -36,6 +34,18 @@ void Board::setLevel(int level) {
 void Board::changeLevel(int level) {
     setLevel(level);
     reset();
+}
+
+int Board::getWidth() {
+    return width;
+}
+
+int Board::getHeight() {
+    return height;
+}
+
+int Board::getStatus() {
+    return status;
 }
 
 void Board::clickCell(int x, int y) {
@@ -140,19 +150,19 @@ void Board::createBoard() {
 void Board::displayBoard(){
 
     // flag counter
-    Font arial;
+    sf::Font arial;
     if (!arial.loadFromFile("fonts/arialbd.TTF")) { std::cout << "Failed to load font" << std::endl; }
 
-    Text flagCount;
+    sf::Text flagCount;
     flagCount.setFont(arial);
     flagCount.setString(std::to_string(numMines - numFlagged));
     flagCount.setCharacterSize(42);
-    flagCount.setFillColor(Color::Black);
+    flagCount.setFillColor(sf::Color::Black);
     flagCount.setPosition(jPos + 45, iPos - 45);
     window.draw(flagCount);
 
     // smiley face & reset button
-    Texture menuHead;
+    sf::Texture menuHead;
     if (status == 1) {
         if (!menuHead.loadFromFile("images/cool.png")) { std::cout << "Failed to load cool face" << std::endl; }
     } else if (status == 0) {
@@ -160,37 +170,37 @@ void Board::displayBoard(){
     } else {
         if (!menuHead.loadFromFile("images/sad.png")) { std::cout << "Failed to load sad face" << std::endl; }
     }
-    Sprite head(menuHead);
+    sf::Sprite head(menuHead);
     head.setScale(sf::Vector2f(2.f, 2.f));
     head.setOrigin(head.getLocalBounds().width/2, head.getLocalBounds().height/2);
     head.setPosition(window.getSize().x/2, iPos - 20);
     window.draw(head);
 
     // algo & attempts label
-    Text algo;
+    sf::Text algo;
     algo.setString("Algorithm:");
     algo.setFont(arial);
     algo.setCharacterSize(32);
-    algo.setFillColor(Color::Black);
+    algo.setFillColor(sf::Color::Black);
     algo.setPosition(35, 750);
     window.draw(algo);
 
-    Text atmpt;
+    sf::Text atmpt;
     atmpt.setString("Attempts:");
     atmpt.setFont(arial);
     atmpt.setCharacterSize(32);
-    atmpt.setFillColor(Color::Black);
+    atmpt.setFillColor(sf::Color::Black);
     atmpt.setPosition(45, 850);
     window.draw(atmpt);
 
     // cell textures
-    Texture t;
+    sf::Texture t;
     if (!t.loadFromFile("images/tiles.jpg")) { std::cout << "Failed to load cell textures" << std::endl; }
-    Sprite game(t);
+    sf::Sprite game(t);
 
     for (int i = 1; i <= height; i++) {
         for (int j = 1; j <= width; j++) {
-            game.setTextureRect(IntRect(32*disPane[i][j], 0, 32, 32));
+            game.setTextureRect(sf::IntRect(32*disPane[i][j], 0, 32, 32));
             game.setPosition(jPos + (j*32), iPos + (i*32));
             window.draw(game);
         }

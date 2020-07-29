@@ -3,31 +3,34 @@
 
 #include <SFML/Graphics.hpp>
 
-using namespace sf;
-
 class Board {
-    public:
-        int level; int numClicks;
-        int width, height, numMines, numFlagged;
-        int pane[18][32];
-        int disPane[18][32];
-        int visited[18][32];
-        int iPos; int jPos;
-        int status;
+private:
+    int level; int numClicks;
+    int width, height, numMines, numFlagged;
+    int pane[18][32];
+    int disPane[18][32];
+    int visited[18][32];
+    int status;
 
-        RenderWindow& window;
+    sf::RenderWindow& window;
 
-        Board(int level, RenderWindow& window);
+public:
+    int iPos; int jPos;
 
-        void createBoard();
-        void displayBoard();
-        void setLevel(int level);
-        void clickCell(int x, int y);
-        void flagCell(int x, int y);
-        void reset();
-        bool mouseInBounds(int x, int y);
-        bool clickSmiley(int x, int y);
-        void changeLevel(int level);
+    Board(int level, sf::RenderWindow& window);
+
+    void createBoard();
+    int getWidth();
+    int getHeight();
+    int getStatus();
+    void displayBoard();
+    void setLevel(int level);
+    void clickCell(int x, int y);
+    void flagCell(int x, int y);
+    void reset();
+    bool mouseInBounds(int x, int y);
+    bool clickSmiley(int x, int y);
+    void changeLevel(int level);
 };
 
 

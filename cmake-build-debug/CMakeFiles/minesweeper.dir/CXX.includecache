@@ -6,13 +6,33 @@
 
 #IncludeRegexTransform: 
 
-/Users/loganbon/CLionProjects/minesweeper-solver/Board.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Board.cpp
+Board.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Board.h
+SFML/Graphics.hpp
+-
+iostream
+-
+
+/Users/loganbon/Desktop/repos/minesweeper-solver/Board.h
 SFML/Graphics.hpp
 -
 
-/Users/loganbon/CLionProjects/minesweeper-solver/Player.cpp
+/Users/loganbon/Desktop/repos/minesweeper-solver/Button.cpp
+iostream
+-
+SFML/Graphics.hpp
+-
+Button.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Button.h
+
+/Users/loganbon/Desktop/repos/minesweeper-solver/Button.h
+SFML/Graphics.hpp
+-
+
+/Users/loganbon/Desktop/repos/minesweeper-solver/Player.cpp
 Player.h
-/Users/loganbon/CLionProjects/minesweeper-solver/Player.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Player.h
 vector
 -
 thread
@@ -20,7 +40,21 @@ thread
 iostream
 -
 
-/Users/loganbon/CLionProjects/minesweeper-solver/Player.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Player.h
 Board.h
-/Users/loganbon/CLionProjects/minesweeper-solver/Board.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Board.h
+
+/Users/loganbon/Desktop/repos/minesweeper-solver/main.cpp
+SFML/Graphics.hpp
+-
+time.h
+-
+string
+-
+Board.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Board.h
+Player.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Player.h
+Button.h
+/Users/loganbon/Desktop/repos/minesweeper-solver/Button.h
 

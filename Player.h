@@ -9,9 +9,9 @@ class Player {
         int gamesPlayed;
         char method;
         Board& b;
-        Window& window;
+        sf::Window& window;
 
-        Player(Board& b, Window& win);
+        Player(Board& b, sf::Window& win);
         void setMethod(char method);
         char getMethod();
         void delayClick(int x, int y);

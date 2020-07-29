@@ -1,56 +1,54 @@
 #include <SFML/Graphics.hpp>
 #include <time.h>
-#include <iostream>
 #include <string>
 #include "Board.h"
 #include "Player.h"
 #include "Button.h"
-using namespace sf;
 
 int main() {
 
     srand(time(0));
 
-    Color bgrnd(250, 243, 230);
+    sf::Color bgrnd(250, 243, 230);
 
-    RenderWindow window;
-    window.create(VideoMode(1280, 960), "Minesweeper", Style::Titlebar | Style::Close);
+    sf::RenderWindow window;
+    window.create(sf::VideoMode(1280, 960), "Minesweeper", sf::Style::Titlebar | sf::Style::Close);
 
     Board b(1, window);
     Player p(b, window);
 
-    Button begBtn(window, Vector2f(30, 20), "Beginner");
-    Button intBtn(window, Vector2f(190, 20), "Intermediate");
-    Button expBtn(window, Vector2f(400, 20), "Expert");
+    Button begBtn(window, sf::Vector2f(30, 20), "Beginner");
+    Button intBtn(window, sf::Vector2f(190, 20), "Intermediate");
+    Button expBtn(window, sf::Vector2f(400, 20), "Expert");
     begBtn.press();
 
-    Button cspBtn(window, Vector2f(220, 745), "CSP");
-    Button tankBtn(window, Vector2f(310, 745), "Tank");
+    Button cspBtn(window, sf::Vector2f(220, 745), "CSP");
+    Button tankBtn(window, sf::Vector2f(310, 745), "Tank");
     cspBtn.press();
 
-    Button gameOn(window, Vector2f(615, 745), "Go");
+    Button gameOn(window, sf::Vector2f(615, 745), "Go");
 
     while (window.isOpen()) {
 
-        Vector2i mPos = Mouse::getPosition(window);
+        sf::Vector2i mPos = sf::Mouse::getPosition(window);
 
         // find cell locations
         int yC = (mPos.y - b.iPos) / 32;
         int xC = (mPos.x - b.jPos) / 32;
 
-        Event e;
+        sf::Event e;
         while (window.pollEvent(e)) {
 
-            if (e.type == Event::Closed) {
+            if (e.type == sf::Event::Closed) {
                 window.close();
 
-            } else if (e.type == Event::MouseButtonPressed) {
+            } else if (e.type == sf::Event::MouseButtonPressed) {
 
                 if (!gameOn.getState()) {
-                    if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Left) {
+                    if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == sf::Mouse::Left) {
                         b.clickCell(yC, xC);
 
-                    } else if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == Mouse::Right) {
+                    } else if (b.mouseInBounds(mPos.x, mPos.y) && e.key.code == sf::Mouse::Right) {
                         b.flagCell(yC, xC);
 
                     } else if (b.clickSmiley(xC, yC)) {

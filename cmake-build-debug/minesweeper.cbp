@@ -5,41 +5,41 @@
 		<Option title="minesweeper"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\local\;CMake Files\..\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\..\usr\local\lib\cmake\SFML\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug"/>
+				<Option working_dir="/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug"/>
+				<Option working_dir="/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug"/>
+				<Option working_dir="/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minesweeper">
-				<Option output="/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/minesweeper" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug"/>
+				<Option output="/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/minesweeper" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -53,15 +53,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 minesweeper"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 minesweeper"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="minesweeper/fast">
-				<Option output="/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/minesweeper" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug"/>
+				<Option output="/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/minesweeper" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -75,51 +75,51 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 minesweeper/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/CLionProjects/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 minesweeper/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/loganbon/Desktop/repos/minesweeper-solver/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Board.cpp">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/Board.cpp">
 			<Option target="minesweeper"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Board.h">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/Board.h">
 			<Option target="minesweeper"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Button.cpp">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/Button.cpp">
 			<Option target="minesweeper"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Button.h">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/Button.h">
 			<Option target="minesweeper"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Player.cpp">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/Player.cpp">
 			<Option target="minesweeper"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/Player.h">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/Player.h">
 			<Option target="minesweeper"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/main.cpp">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/main.cpp">
 			<Option target="minesweeper"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/CMakeLists.txt">
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/../../../../usr/local/lib/cmake/SFML/SFMLConfig.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/../../../../../usr/local/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/../../../../usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/../../../../../usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/../../../../usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/../../../../../usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/../../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
-		<Unit filename="/Users/loganbon/CLionProjects/minesweeper-solver/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake">
-			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		<Unit filename="/Users/loganbon/Desktop/repos/minesweeper-solver/../../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\local\lib\cmake\SFML\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
