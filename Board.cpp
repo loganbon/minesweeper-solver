@@ -2,16 +2,32 @@
 #include <SFML/Graphics.hpp>
 #include <iostream>
 
-Board::Board(int level, sf::RenderWindow& win) : window(win){
+Board::Board(int level, sf::RenderWindow& win) : window(win) {
     this -> numFlagged = 0;
     this -> status = 0;
     this -> numClicks = 0;
-    setLevel(level);
+    this -> level = level;
+    configLevel();
     createBoard();
 }
 
-void Board::setLevel(int level) {
-    this -> level = level;
+int& Board::getCell(int x, int y) {
+    return disPane[x][y];
+}
+
+bool Board::isFlagged(int x, int y) {
+    return getCell(x, y) == 11;
+}
+
+int& Board::getNumMines() {
+    return numMines;
+}
+
+int& Board::getNumFlagged() {
+    return numFlagged;
+}
+
+void Board::configLevel() {
     switch (level) {
         case 1:
             width = 8; height = 8;
@@ -32,23 +48,25 @@ void Board::setLevel(int level) {
 }
 
 void Board::changeLevel(int level) {
-    setLevel(level);
+    this -> level = level;
+    configLevel();
     reset();
 }
 
-int Board::getWidth() {
+int& Board::getWidth() {
     return width;
 }
 
-int Board::getHeight() {
+int& Board::getHeight() {
     return height;
 }
 
-int Board::getStatus() {
+int& Board::getStatus() {
     return status;
 }
 
 void Board::clickCell(int x, int y) {
+    if (x > height || x < 1 || y > width || y < 1) return;
     if (status == -1 || status == 1 || visited[x][y] == 1 || disPane[x][y] == 11) return;
     if (pane[x][y] == 9) status = -1;
     disPane[x][y] = pane[x][y];
@@ -66,18 +84,22 @@ void Board::clickCell(int x, int y) {
         if (!visited[x][y - 1]) clickCell(x, y - 1);
     }
     if (numClicks + numFlagged == (height * width)) { status = 1; }
+    //std::cout << "Clicked: " << x << ", " << y << std::endl;
 }
 
 void Board::flagCell(int x, int y) {
-    if (status == -1 || status == 1) return;
-    if (numFlagged == numMines && numClicks + numFlagged == (height * width)) return;
+    if (status == -1 || status == 1 || x == 0 || y == 0) return;
+    if (numFlagged == numMines) return;
     if (disPane[x][y] == 11) {
         disPane[x][y] = 10;
         numFlagged--;
+        //std::cout << "Unflagged: " << x << ", " << y << std::endl;
     } else if (disPane[x][y] == 10) {
         disPane[x][y] = 11;
         numFlagged++;
+        //std::cout << "Flagged: " << x << ", " << y << std::endl;
     }
+    if (numClicks + numFlagged == (height * width)) { status = 1; }
 }
 
 void Board::reset() {
@@ -153,14 +175,6 @@ void Board::displayBoard(){
     sf::Font arial;
     if (!arial.loadFromFile("fonts/arialbd.TTF")) { std::cout << "Failed to load font" << std::endl; }
 
-    sf::Text flagCount;
-    flagCount.setFont(arial);
-    flagCount.setString(std::to_string(numMines - numFlagged));
-    flagCount.setCharacterSize(42);
-    flagCount.setFillColor(sf::Color::Black);
-    flagCount.setPosition(jPos + 45, iPos - 45);
-    window.draw(flagCount);
-
     // smiley face & reset button
     sf::Texture menuHead;
     if (status == 1) {
@@ -176,26 +190,18 @@ void Board::displayBoard(){
     head.setPosition(window.getSize().x/2, iPos - 20);
     window.draw(head);
 
-    // algo & attempts label
-    sf::Text algo;
-    algo.setString("Algorithm:");
-    algo.setFont(arial);
-    algo.setCharacterSize(32);
-    algo.setFillColor(sf::Color::Black);
-    algo.setPosition(35, 750);
-    window.draw(algo);
-
-    sf::Text atmpt;
-    atmpt.setString("Attempts:");
-    atmpt.setFont(arial);
-    atmpt.setCharacterSize(32);
-    atmpt.setFillColor(sf::Color::Black);
-    atmpt.setPosition(45, 850);
-    window.draw(atmpt);
+    // attempts label
+    sf::Text attempt;
+    attempt.setString("Attempts:");
+    attempt.setFont(arial);
+    attempt.setCharacterSize(32);
+    attempt.setFillColor(sf::Color::Black);
+    attempt.setPosition(775, 25);
+    window.draw(attempt);
 
     // cell textures
     sf::Texture t;
-    if (!t.loadFromFile("images/tiles.jpg")) { std::cout << "Failed to load cell textures" << std::endl; }
+    if (!t.loadFromFile("images/tiles.jpg")) { std::cout << "Failed to load cell textures." << std::endl; }
     sf::Sprite game(t);
 
     for (int i = 1; i <= height; i++) {

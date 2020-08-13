@@ -20,8 +20,6 @@ Button::Button(sf::RenderWindow& win, sf::Vector2f pos, std::string text) : wind
     button.setFillColor(bgrnd);
 
     label.setPosition((pos.x + width / 2) - (label.getLocalBounds().width / 2), pos.y + 5);
-
-
 }
 
 bool Button::mouseOn(int x, int y) {
@@ -55,7 +53,6 @@ bool Button::getState() {
 }
 
 void Button::display() {
-
     window.draw(button);
     window.draw(label);
 }

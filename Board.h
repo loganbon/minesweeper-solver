@@ -20,13 +20,17 @@ public:
     Board(int level, sf::RenderWindow& window);
 
     void createBoard();
-    int getWidth();
-    int getHeight();
-    int getStatus();
+    int& getWidth();
+    int& getNumMines();
+    int& getNumFlagged();
+    int& getHeight();
+    int& getStatus();
+    int& getCell(int x, int y);
     void displayBoard();
-    void setLevel(int level);
+    void configLevel();
     void clickCell(int x, int y);
     void flagCell(int x, int y);
+    bool isFlagged(int x, int y);
     void reset();
     bool mouseInBounds(int x, int y);
     bool clickSmiley(int x, int y);
